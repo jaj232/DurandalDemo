@@ -1,0 +1,25 @@
+﻿<div class="container">
+	<h2 data-bind="text: displayName"></h2>
+	<form class="form-horizontal" role="form">
+		<div class="form-group">
+			<table class="table table-striped table-hover table-bordered">
+				<thead>
+					<tr data-bind="foreach: header">
+						<th data-bind="text: $data">
+						</th>
+					</tr>
+				</thead>
+				<tbody class="bg-success" data-bind="foreach: incident">
+					<tr>
+						<td data-bind="text: $data.Ref"></td>
+						<td data-bind="text: $data.Sum"></td>
+						<td data-bind="text: $data.CurStat"></td>
+						<td data-bind="text: $data.Logged"></td>
+						<td data-bind="text: $data.EndUser"></td>
+						<td data-bind="text: $data.Min"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</form>
+</div>
